@@ -1,0 +1,56 @@
+<section id="perfil" class="section about">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Perfil profesional</p>
+      <h2 class="section-title">Código con intención, proyectos con contexto.</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-copy">
+        <p>
+          Soy estudiante de <strong>Ingeniería de Sistemas</strong> en la
+          <strong>Unidad Central del Valle del Cauca (UCEVA)</strong>. Durante la carrera he
+          trabajado en proyectos de arquitectura de software, desarrollo móvil y aplicaciones web,
+          combinando la implementación con pruebas, documentación y despliegue continuo.
+        </p>
+        <p>
+          Me gusta entender el problema antes de escribir la primera línea: modelar el dominio,
+          separar las capas y dejar un camino claro para que el proyecto crezca. Este portafolio es
+          el punto de entrada a esos proyectos y a las decisiones técnicas detrás de cada uno.
+        </p>
+
+        <div class="education-card">
+          <span class="education-icon" aria-hidden="true">U</span>
+          <div>
+            <strong>Unidad Central del Valle del Cauca</strong>
+            <p>Ingeniería de Sistemas · Tuluá, Colombia</p>
+            <span>Arquitectura de Software · Desarrollo Móvil · Electiva profesional</span>
+          </div>
+        </div>
+
+        <ul class="principles">
+          @for (principle of principles; track principle) {
+            <li>
+              <span aria-hidden="true">✓</span>
+              {{ principle }}
+            </li>
+          }
+        </ul>
+      </div>
+
+      <div class="skills-grid">
+        @for (group of skillGroups; track group.title) {
+          <article class="skill-card">
+            <span class="skill-icon" aria-hidden="true">{{ group.icon }}</span>
+            <h3>{{ group.title }}</h3>
+            <ul>
+              @for (skill of group.skills; track skill) {
+                <li>{{ skill }}</li>
+              }
+            </ul>
+          </article>
+        }
+      </div>
+    </div>
+  </div>
+</section>

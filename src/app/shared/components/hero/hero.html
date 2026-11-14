@@ -1,0 +1,75 @@
+<section id="inicio" class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="status-pill">
+        <span class="status-dot" aria-hidden="true"></span>
+        Disponible para prácticas profesionales
+      </p>
+
+      <h1>
+        José Alejandro<br />
+        <span class="gradient-text">Loaiza López</span>
+      </h1>
+
+      <p class="hero-role">Estudiante de Ingeniería de Sistemas · Desarrollador Full Stack</p>
+
+      <p class="hero-description">
+        Construyo aplicaciones web y móviles con Angular, Flutter y Java. Me interesa la
+        arquitectura de software, la automatización de despliegues y el código que se puede
+        mantener: probado, documentado y publicado.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+        <a class="btn btn-ghost" [href]="githubUrl" target="_blank" rel="noopener noreferrer">
+          Explorar GitHub
+        </a>
+      </div>
+
+      <dl class="hero-stats" aria-label="Resumen del portafolio">
+        <div>
+          <dt>Proyectos</dt>
+          <dd>{{ projectCount }}</dd>
+        </div>
+        <div>
+          <dt>En GitHub Pages</dt>
+          <dd>{{ liveCount }}</dd>
+        </div>
+        <div>
+          <dt>Universidad</dt>
+          <dd>UCEVA</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="hero-panel" aria-label="Resumen del perfil">
+      <div class="panel-glow" aria-hidden="true"></div>
+      <div class="code-card">
+        <div class="code-bar">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+          <span class="code-file">developer.ts</span>
+        </div>
+        <pre><code><span class="token-keyword">const</span> <span class="token-var">developer</span> = &#123;
+  <span class="token-prop">name</span>: <span class="token-string">'José Alejandro'</span>,
+  <span class="token-prop">role</span>: <span class="token-string">'Full Stack Developer'</span>,
+  <span class="token-prop">stack</span>: [
+    <span class="token-string">'Angular'</span>, <span class="token-string">'Flutter'</span>,
+    <span class="token-string">'Java'</span>, <span class="token-string">'Node.js'</span>
+  ],
+  <span class="token-prop">focus</span>: <span class="token-string">'Arquitectura y CI/CD'</span>,
+  <span class="token-prop">learning</span>: <span class="token-boolean">true</span>,
+&#125;;</code></pre>
+      </div>
+
+      <div class="profile-chip">
+        <span class="profile-avatar" aria-hidden="true">JA</span>
+        <span>
+          <strong>Tuluá, Colombia</strong>
+          <small>UCEVA · Ingeniería de Sistemas</small>
+        </span>
+      </div>
+    </aside>
+  </div>
+</section>

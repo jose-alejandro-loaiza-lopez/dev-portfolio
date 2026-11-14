@@ -1,0 +1,126 @@
+.projects {
+  position: relative;
+}
+
+.projects-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2.4rem;
+}
+
+.projects-summary {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 0.6rem;
+}
+
+.projects-summary span {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.projects-summary strong {
+  color: var(--text);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem;
+}
+
+.more-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 280px;
+  padding: 1.8rem;
+  border: 1px dashed var(--border-strong);
+  border-radius: 20px;
+  background: rgb(10 16 34 / 40%);
+  color: var(--text);
+  text-decoration: none;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.more-card:hover {
+  border-color: var(--accent);
+  background: rgb(56 189 248 / 5%);
+  transform: translateY(-4px);
+}
+
+.more-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgb(56 189 248 / 30%);
+  border-radius: 13px;
+  background: rgb(56 189 248 / 9%);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.more-card h3 {
+  margin: 1.1rem 0 0.5rem;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+
+.more-card p {
+  max-width: 420px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+.more-link {
+  margin-top: 1.4rem;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.projects-note {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 1.6rem 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.projects-note span {
+  color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+.projects-note strong {
+  color: var(--text-soft);
+}
+
+@media (max-width: 900px) {
+  .projects-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}

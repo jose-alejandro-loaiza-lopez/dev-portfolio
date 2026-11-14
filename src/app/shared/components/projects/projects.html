@@ -1,0 +1,46 @@
+<section id="proyectos" class="section projects">
+  <div class="container">
+    <div class="projects-heading">
+      <div class="section-heading">
+        <p class="eyebrow">Catálogo de proyectos</p>
+        <h2 class="section-title">Cinco proyectos, dos enlaces cada uno.</h2>
+        <p class="section-subtitle">
+          Cada tarjeta abre el repositorio en GitHub y la aplicación publicada. Todos los
+          proyectos usan GitHub Actions para construir y desplegar en GitHub Pages.
+        </p>
+      </div>
+
+      <div class="projects-summary" aria-label="Estado de los proyectos">
+        <span><strong>{{ liveCount }}</strong> publicados</span>
+        <span><strong>{{ pendingCount }}</strong> en preparación</span>
+      </div>
+    </div>
+
+    <div class="projects-grid">
+      @for (project of projects; track project.id; let index = $index) {
+        <app-project-card [project]="project" [index]="index + 1" />
+      }
+
+      <a
+        class="more-card"
+        [href]="githubUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="more-icon" aria-hidden="true">+</span>
+        <h3>Más allá del catálogo</h3>
+        <p>
+          En GitHub también están mis proyectos de backend, aplicaciones móviles y sistemas
+          embebidos.
+        </p>
+        <span class="more-link">Explorar repositorios ↗</span>
+      </a>
+    </div>
+
+    <p class="projects-note">
+      <span aria-hidden="true">↳</span>
+      Los proyectos marcados como <strong>demo en preparación</strong> se publicarán en GitHub
+      Pages en la siguiente etapa del portafolio.
+    </p>
+  </div>
+</section>
