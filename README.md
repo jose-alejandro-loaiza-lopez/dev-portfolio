@@ -21,13 +21,14 @@ El proyecto funciona como catálogo centralizado de cinco proyectos: presenta el
 | 2 | Storage Manager | [Repositorio](https://github.com/jose-alejandro-loaiza-lopez/Uceva-Angular-Taller-Storage-Manager) | [GitHub Pages](https://jose-alejandro-loaiza-lopez.github.io/Uceva-Angular-Taller-Storage-Manager/) |
 | 3 | Design System | [Repositorio](https://github.com/jose-alejandro-loaiza-lopez/Uceva-Angular-Taller-Design-System) | [GitHub Pages](https://jose-alejandro-loaiza-lopez.github.io/Uceva-Angular-Taller-Design-System/) |
 | 4 | Angular Modules Lab | [Repositorio](https://github.com/jose-alejandro-loaiza-lopez/Uceva-Angular-Taller-Modules) | [GitHub Pages](https://jose-alejandro-loaiza-lopez.github.io/Uceva-Angular-Taller-Modules/) |
-| 5 | Colombia Open Data | [Repositorio](https://github.com/jose-alejandro-loaiza-lopez/parcial_2_datos_abiertos) | En preparación |
+| 5 | Colombia Open Data | [Repositorio](https://github.com/jose-alejandro-loaiza-lopez/parcial_2_datos_abiertos) | [GitHub Pages](https://jose-alejandro-loaiza-lopez.github.io/parcial_2_datos_abiertos/) |
 
 ## Funcionalidades
 
 - Perfil profesional con educación, enfoque y habilidades organizadas por área.
 - Catálogo de cinco proyectos con descripción, características, tecnologías, repositorio y demo.
 - Estado visual para proyectos publicados y proyectos en preparación.
+- Los cinco proyectos enlazan repositorio y demo publicada en GitHub Pages.
 - Diseño responsive con navegación por secciones, foco visible y soporte para movimiento reducido.
 - Metadatos SEO y favicon propio.
 - Pruebas unitarias con Jest y cobertura del 100% del código de la aplicación.
