@@ -28,12 +28,13 @@ export const PROJECTS: readonly Project[] = [
     name: 'Storage Manager',
     tagline: 'Librería Angular para el navegador',
     description:
-      'Librería reutilizable para administrar LocalStorage y Cache Storage con una API tipada, manejo consistente de errores y una aplicación showcase que demuestra su uso.',
-    technologies: ['Angular', 'TypeScript', 'Jest', 'NPM', 'GitHub Actions', 'GitHub Pages'],
+      'Librería reutilizable para administrar LocalStorage y Cache Storage con una API tipada, manejo consistente de errores, 100% de cobertura y una aplicación showcase que la consume desde NPM.',
+    technologies: ['Angular', 'TypeScript', 'Jest', 'NPM', 'Compodoc', 'GitHub Actions', 'GitHub Pages'],
     features: [
       'Servicios tipados para LocalStorage y Cache Storage',
+      '84 pruebas unitarias con 100% de cobertura',
       'Publicada en NPM como @josefo_pro/angular-storage-manager',
-      'Showcase interactivo desplegado en GitHub Pages',
+      'Showcase y documentación técnica con Compodoc en GitHub Pages',
       'Flujo de release automático con GitHub Actions',
     ],
     repoUrl: `${GITHUB_PROFILE}/Uceva-Angular-Taller-Storage-Manager`,
@@ -93,6 +94,7 @@ export const PROJECTS: readonly Project[] = [
     features: [
       'Integración con cuatro endpoints de la API Colombia',
       'Vistas de dashboard, listado y detalle con go_router',
+      'Demo web enmarcada en formato vertical 9:18 en escritorio',
       'Manejo explícito de estados de carga, error y reintento',
       'Build web publicado en GitHub Pages con el resto del catálogo',
     ],
