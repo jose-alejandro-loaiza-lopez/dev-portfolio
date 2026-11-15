@@ -18,14 +18,13 @@ describe('PortfolioService', () => {
     expect(new Set(ids).size).toBe(ids.length);
   });
 
-  it('debería separar los proyectos publicados de los pendientes', () => {
+  it('debería mantener todos los proyectos publicados', () => {
     const live = service.getLiveProjects();
     const pending = service.getPendingProjects();
 
-    expect(live).toHaveLength(4);
-    expect(pending).toHaveLength(1);
+    expect(live).toHaveLength(5);
+    expect(pending).toHaveLength(0);
     expect(live.every((project) => project.status === 'live')).toBe(true);
-    expect(pending.every((project) => project.status === 'pending')).toBe(true);
   });
 
   it('debería incluir repositorio en todos los proyectos', () => {
@@ -38,9 +37,13 @@ describe('PortfolioService', () => {
     expect(service.getLiveProjects().every((project) => project.demoUrl !== null)).toBe(true);
   });
 
-  it('debería mantener el proyecto pendiente sin demo', () => {
-    const pendingProject = service.getPendingProjects()[0];
-    expect(pendingProject.demoUrl).toBeNull();
+  it('debería publicar la demo de Colombia Open Data en GitHub Pages', () => {
+    const colombia = service.getProjects().find((project) => project.id === 'colombia-open-data');
+
+    expect(colombia?.demoUrl).toBe(
+      'https://jose-alejandro-loaiza-lopez.github.io/parcial_2_datos_abiertos/',
+    );
+    expect(colombia?.status).toBe('live');
   });
 
   it('debería describir cada proyecto con características y tecnologías', () => {

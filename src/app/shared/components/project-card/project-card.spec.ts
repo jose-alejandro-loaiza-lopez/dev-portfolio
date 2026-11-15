@@ -28,7 +28,11 @@ describe('ProjectCardComponent', () => {
   });
 
   it('debería mostrar el estado de preparación cuando no hay demo', () => {
-    fixture.componentRef.setInput('project', PROJECTS[4]);
+    fixture.componentRef.setInput('project', {
+      ...PROJECTS[4],
+      status: 'pending',
+      demoUrl: null,
+    });
     fixture.detectChanges();
 
     const element = fixture.nativeElement as HTMLElement;
@@ -36,6 +40,19 @@ describe('ProjectCardComponent', () => {
     expect(element.textContent).toContain('En preparación');
     expect(element.textContent).toContain('Demo en preparación');
     expect(element.querySelector('a[href*="github.io"]')).toBeNull();
+  });
+
+  it('debería enlazar la demo de Colombia Open Data', () => {
+    fixture.componentRef.setInput('project', PROJECTS[4]);
+    fixture.detectChanges();
+
+    const element = fixture.nativeElement as HTMLElement;
+    const demo = element.querySelector('a[href*="github.io"]') as HTMLAnchorElement;
+
+    expect(element.textContent).toContain('Publicado');
+    expect(demo.getAttribute('href')).toBe(
+      'https://jose-alejandro-loaiza-lopez.github.io/parcial_2_datos_abiertos/',
+    );
   });
 
   it('debería listar las tecnologías y características', () => {

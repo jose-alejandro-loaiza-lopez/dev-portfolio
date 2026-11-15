@@ -16,15 +16,23 @@ describe('ProjectsComponent', () => {
     expect(cards).toHaveLength(5);
   });
 
-  it('debería mostrar el resumen de proyectos publicados y pendientes', () => {
+  it('debería mostrar el resumen de proyectos publicados', () => {
     const fixture = TestBed.createComponent(ProjectsComponent);
     fixture.detectChanges();
 
     const content = fixture.nativeElement.textContent as string;
-    expect(content).toContain('4');
+    expect(content).toContain('5');
     expect(content).toContain('publicados');
-    expect(content).toContain('1');
-    expect(content).toContain('en preparación');
+    expect(content).not.toContain('en preparación');
+  });
+
+  it('debería indicar que los cinco proyectos tienen demo publicada', () => {
+    const fixture = TestBed.createComponent(ProjectsComponent);
+    fixture.detectChanges();
+
+    const content = fixture.nativeElement.textContent as string;
+    expect(content).toContain('Los cinco proyectos enlazan su repositorio');
+    expect(content).toContain('demo publicada en GitHub Pages');
   });
 
   it('debería enlazar al perfil de GitHub para ver más proyectos', () => {
