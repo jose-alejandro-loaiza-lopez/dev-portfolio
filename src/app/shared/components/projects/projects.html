@@ -12,7 +12,9 @@
 
       <div class="projects-summary" aria-label="Estado de los proyectos">
         <span><strong>{{ liveCount }}</strong> publicados</span>
-        <span><strong>{{ pendingCount }}</strong> en preparación</span>
+        @if (pendingCount > 0) {
+          <span><strong>{{ pendingCount }}</strong> en preparación</span>
+        }
       </div>
     </div>
 
@@ -39,8 +41,7 @@
 
     <p class="projects-note">
       <span aria-hidden="true">↳</span>
-      Los proyectos marcados como <strong>demo en preparación</strong> se publicarán en GitHub
-      Pages en la siguiente etapa del portafolio.
+      Los cinco proyectos enlazan su repositorio y su demo publicada en GitHub Pages.
     </p>
   </div>
 </section>
